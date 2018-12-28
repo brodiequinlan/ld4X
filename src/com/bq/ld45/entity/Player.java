@@ -21,7 +21,7 @@ public class Player extends Entity
 
 	float lightx = 0;
 	float lighty = 0;
-	private float radius = 50;
+	private float radius = 60;
 
 	public Player(int x, int y, int vx, int vy, EntityManager em)
 	{
@@ -120,14 +120,13 @@ public class Player extends Entity
 		
 		if(Game.DEBUG)
 		g.fillRect(hitbox.x*Game.SCALE, hitbox.y*Game.SCALE,hitbox.width*Game.SCALE, hitbox.height*Game.SCALE);
-
 		Graphics2D g2d = (Graphics2D)g;
 		Point2D center = new Point2D.Float(lightx*Game.SCALE,lighty*Game.SCALE);
 		float[] dist = {0.0f,1.0f};
-		Color[] colors = {new Color(0.2f,0.2f,0.2f,0.2f),Color.BLACK};
+		Color[] colors = {new Color(0.0f,0.0f,0.0f,0.0f),Color.BLACK};
 		RadialGradientPaint  p = new RadialGradientPaint(center,radius*Game.SCALE,dist,colors);
 		g2d.setPaint(p);
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, .92f));
-		g2d.fillRect(0,0,2000,2000);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, .89f));
+		g2d.fillRect(0,0,64*16*Game.SCALE,64*16*Game.SCALE);
 	}
 }

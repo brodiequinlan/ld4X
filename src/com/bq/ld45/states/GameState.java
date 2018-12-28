@@ -30,7 +30,17 @@ public class GameState extends State
 		em = new EntityManager();
 		Player p = new Player(150,100,1,0, em);
 		em.addEntity(p);
+
 		em.addEntity(new Woman(100,100,1,1,2));
+
+
+
+
+		Random r = new Random();
+
+
+
+
 		Game.handler.cam = new Camera(p);
 		cam = Game.handler.cam;
 		Game.handler.map = new Map();

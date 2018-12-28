@@ -15,7 +15,7 @@ public class EntityManager
 	private Entity marked;
 	public void addEntity(Entity e)
 	{
-		entities.add(e);
+		entities.add(0,e);
 	}
 	public void remove(Entity e)
 	{
@@ -30,7 +30,7 @@ public class EntityManager
 		}
 		if(marked != null)
 		{
-			entities.add(marked);
+			entities.add(0,marked);
 			marked = null;
 		}
 	}

@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 import com.bq.ld45.game.Game;
 
 public class Map
@@ -53,7 +54,7 @@ public class Map
 					}
 					if(!flag)
 					{
-						if(r.nextInt(15) == 7)
+						if(r.nextInt(25) == 7)
 							tiles.add(new Tree(i*16,y*16));
 						else
 							tiles.add(new Grass(i*16,y*16));

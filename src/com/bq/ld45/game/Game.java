@@ -1,8 +1,6 @@
 package com.bq.ld45.game;
 
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.image.BufferStrategy;
 
 import com.bq.ld45.input.KeyManager;
@@ -106,7 +104,8 @@ public class Game implements Runnable
 	    g.fillRect(0, 0, window.getWidth(), window.getHeight());
 
 		stateManager.peek().render(g);
-		
+		Graphics2D g2d = (Graphics2D)g;
+
 		g.dispose();
 		bs.show();
 	}
